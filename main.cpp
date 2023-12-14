@@ -22,7 +22,7 @@ void mostrarMaterias(){
     string mat;
     int i;
     cout << "Escriba las Asignaturas/Materias una por una:" << endl;
-    for(i=0,i<10,i++){
+    for (i=0,i<10,++i) {
         cin >> mat;
         estudiante1.materias.push_back(mat);
     }
