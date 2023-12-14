@@ -53,6 +53,9 @@ void mostrar_asistencia(Estudiante& estudiante1){
             i = 0;
         }
     }
+    for (const auto& asistencia : estudiante1.Asistencias_vector) {
+        cout << "Fecha: " << asistencia.fecha << "\tMateria: " << asistencia.materia << "\tEstado: " << asistencia.estado << endl;
+    }
 }
 int main(){
     mostrarEstudiante();
