@@ -37,14 +37,21 @@ void mostrarMaterias(){
     }
 }
 
-void mostrar_asistencia(){
-    struct Asistencia asistencia1;
+void mostrar_asistencia(Estudiante& estudiante1){
+    struct Asistencia nueva_asistencia;
     int i = 1;
     string fech, mat, est;
     while (i != 0){
         cout << "Cual es la fecha:\n ";cin >> fech;
+        nueva_asistencia.fecha = fech;
         cout << "Cual la asignatura:\n ";cin >> mat;
+        nueva_asistencia.materia = mat;
         cout << "Y cual el estado de presencia:\n ";cin >> est;
+        nueva_asistencia.estado = est;
+
+        if (fech== "final"){
+            i = 0;
+        }
     }
 }
 int main(){
