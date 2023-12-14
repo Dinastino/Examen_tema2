@@ -13,4 +13,5 @@ https://github.com/Dinastino/Examen_tema2.git
 4) ¿Qué son los templates en C++?
     -b) Permiten la creación de funciones y clases genéricas, es decir, que pueden trabajar con cualquier tipo de datos.
 
-
+En la primera parte hay que establecer una estructura estudiante ocn tres parametros que son la
+edad, promedio y nombre

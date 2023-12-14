@@ -17,9 +17,15 @@ struct Asistencia{
 };
 void mostrarEstudiante(){
     struct Estudiante estudiante1;
-    estudiante1.nombre = "Juan";
-    estudiante1.edad = 12;
-    estudiante1.pormedio = 5.1;
+    string n;
+    int e;
+    float p;
+    cout << "Escriba el nombre: \n";cin >> n;
+    estudiante1.nombre = n;
+    cout << "Escriba la edad: \n";cin >> e;
+    estudiante1.edad = e;
+    cout << "Escriba el promedio: \n";cin >> p;
+    estudiante1.pormedio = p;
     cout << "Nombre: " << estudiante1.nombre<< "\nEdad: " << estudiante1.edad<< "\nPromedio: " << estudiante1.pormedio << endl;
 }
 
@@ -42,21 +48,28 @@ void mostrar_asistencia(Estudiante& estudiante1){
     int i = 1;
     string fech, mat, est;
     while (i != 0){
-        cout << "Cual es la fecha:\n ";cin >> fech;
-        nueva_asistencia.fecha = fech;
-        cout << "Cual la asignatura:\n ";cin >> mat;
-        nueva_asistencia.materia = mat;
-        cout << "Y cual el estado de presencia:\n ";cin >> est;
-        nueva_asistencia.estado = est;
-        estudiante1.Asistencias_vector.push_back(nueva_asistencia);
-        if (fech== "final"){
-            i = 0;
+        try {
+            cout << "Cual es la fecha:\n ";
+            cin >> fech;
+            nueva_asistencia.fecha = fech;
+            cout << "Cual la asignatura:\n ";
+            cin >> mat;
+            nueva_asistencia.materia = mat;
+            cout << "Y cual el estado de presencia:\n ";
+            cin >> est;
+            nueva_asistencia.estado = est;
+            estudiante1.Asistencias_vector.push_back(nueva_asistencia);
+            if (fech == "final") {
+                i = 0;
+            }
         }
+        catch (const){}
     }
     for (const auto& asistencia : estudiante1.Asistencias_vector) {
         cout << "Fecha: " << asistencia.fecha << "\tMateria: " << asistencia.materia << "\tEstado: " << asistencia.estado << endl;
     }
 }
+
 int main(){
     mostrarEstudiante();
     mostrarMaterias();
