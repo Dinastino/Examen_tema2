@@ -6,9 +6,15 @@ struct Estudiante{
     string nombre;
     int edad;
     float pormedio;
-    vector<string> materias;
+    vector<string> Materias_vector;
+    vector<struct Asistencia> Asistencias_vector;
 };
 
+struct Asistencia{
+    string fecha;
+    string materia;
+    string estado;
+};
 void mostrarEstudiante(){
     struct Estudiante estudiante1;
     estudiante1.nombre = "Juan";
@@ -24,13 +30,20 @@ void mostrarMaterias(){
     cout << "Escriba las Asignaturas/Materias una por una:" << endl;
     for (i=0,i<10,++i) {
         cin >> mat;
-        estudiante1.materias.push_back(mat);
+        estudiante1.Materias_vector.push_back(mat);
     }
-    for (const auto& materia : estudiante1.materias) {
+    for (const auto& materia : estudiante1.Materias_vector) {
         cout << materia << " ";
     }
 }
 
+void mostrar_asistencia(){
+    struct Estudiante estudiante1;
+    int i = 1;
+    while (i != 0){
+        cout << "Cual es la fecha:\n "
+    }
+}
 int main(){
     mostrarEstudiante();
     mostrarMaterias();
