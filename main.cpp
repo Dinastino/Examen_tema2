@@ -47,24 +47,36 @@ void mostrar_asistencia(Estudiante& estudiante1){
     struct Asistencia nueva_asistencia;
     int i = 1;
     string fech, mat, est;
-    while (i != 0){
-        try {
-            cout << "Cual es la fecha:\n ";
+
+    try {
+        while (i != 0) {
+            cout << "Cual es la fecha ('final' para salir):\n ";
             cin >> fech;
-            nueva_asistencia.fecha = fech;
+
+            if (fech == "final") {
+                i = 0;
+                break;
+            }
+
             cout << "Cual la asignatura:\n ";
             cin >> mat;
+            nueva_asistencia.fecha = fech;
             nueva_asistencia.materia = mat;
+
             cout << "Y cual el estado de presencia:\n ";
             cin >> est;
             nueva_asistencia.estado = est;
+
             estudiante1.Asistencias_vector.push_back(nueva_asistencia);
-            if (fech == "final") {
+            if (fech == "final"){
                 i = 0;
             }
         }
-        catch (const){}
+    } catch (const exception& e) {
+        cerr << "Error: " << e.what() << endl;
     }
+
+    cout << "Asistencias Registradas:" << endl;
     for (const auto& asistencia : estudiante1.Asistencias_vector) {
         cout << "Fecha: " << asistencia.fecha << "\tMateria: " << asistencia.materia << "\tEstado: " << asistencia.estado << endl;
     }
