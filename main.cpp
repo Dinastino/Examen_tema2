@@ -48,7 +48,7 @@ void mostrar_asistencia(Estudiante& estudiante1){
         nueva_asistencia.materia = mat;
         cout << "Y cual el estado de presencia:\n ";cin >> est;
         nueva_asistencia.estado = est;
-
+        estudiante1.Asistencias_vector.push_back(nueva_asistencia);
         if (fech== "final"){
             i = 0;
         }

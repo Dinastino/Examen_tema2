@@ -1,3 +1,4 @@
+https://github.com/Dinastino/Examen_tema2.git
 # Examen_tema2
 
 1) ¿Cuál es la principal diferencia entre la estructura básica del programa en C y C++?
@@ -11,3 +12,5 @@
 
 4) ¿Qué son los templates en C++?
     -b) Permiten la creación de funciones y clases genéricas, es decir, que pueden trabajar con cualquier tipo de datos.
+
+
