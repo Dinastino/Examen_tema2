@@ -8,6 +8,11 @@ struct Estudiante{
     float pormedio;
     vector<string> materias;
 };
+struct Asistencia{
+    string fecha = "12 de octubre";
+
+
+};
 
 void mostrarEstudiante(){
     struct Estudiante estudiante1;
@@ -22,7 +27,7 @@ void mostrarMaterias(){
     string mat;
     int i;
     cout << "Escriba las Asignaturas/Materias una por una:" << endl;
-    for (i=0,i<10,++i) {
+    for (i = 0; i < 10; ++i) {
         cin >> mat;
         estudiante1.materias.push_back(mat);
     }
